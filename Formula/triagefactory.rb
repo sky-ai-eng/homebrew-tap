@@ -5,21 +5,21 @@
 class Triagefactory < Formula
   desc "Local-first AI triage for engineering backlogs — single Go binary"
   homepage "https://github.com/sky-ai-eng/triage-factory"
-  version "1.14.2"
+  version "1.15.0"
   license "BUSL-1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.14.2/triagefactory_1.14.2_darwin_amd64.tar.gz"
-      sha256 "8a699df953a7f886023c39b3ae5382274a4ba1f5bd7e55ee2ab20c7937c3340c"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.15.0/triagefactory_1.15.0_darwin_amd64.tar.gz"
+      sha256 "ea146d01debb3a2dfa52d9045c2a4862958973253d7bccc337d8cc6eef2982eb"
 
       define_method(:install) do
         bin.install "triagefactory"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.14.2/triagefactory_1.14.2_darwin_arm64.tar.gz"
-      sha256 "302524c191576a0addb23bb77f876ab5eda3ecad7f747d4023f638c932089403"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.15.0/triagefactory_1.15.0_darwin_arm64.tar.gz"
+      sha256 "928eeebb699f1dc9aca13d547561dc76776fd476923115a31c1f79be831e066a"
 
       define_method(:install) do
         bin.install "triagefactory"
@@ -29,15 +29,15 @@ class Triagefactory < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.14.2/triagefactory_1.14.2_linux_amd64.tar.gz"
-      sha256 "a0f2815f26f8b7367b5b66c9df81c6ff55ca18cea2fab8c29176bd7bcce5692e"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.15.0/triagefactory_1.15.0_linux_amd64.tar.gz"
+      sha256 "1a424e68feab531ac7c6dc626f63d5c7e36ed2438f397a3b344a38fc8e7ed979"
       define_method(:install) do
         bin.install "triagefactory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.14.2/triagefactory_1.14.2_linux_arm64.tar.gz"
-      sha256 "204f97bc73395211824f3fa6d83704d3cabd361efe5a5e697bc481db40c317b5"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.15.0/triagefactory_1.15.0_linux_arm64.tar.gz"
+      sha256 "06e063802656e6a5c464cd6baa70eaf33c176c81c54d36be235ebf6348fa5e4e"
       define_method(:install) do
         bin.install "triagefactory"
       end
