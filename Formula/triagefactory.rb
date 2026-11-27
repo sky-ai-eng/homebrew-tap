@@ -5,12 +5,12 @@
 class Triagefactory < Formula
   desc "Local-first AI triage for engineering backlogs — single Go binary"
   homepage "https://github.com/sky-ai-eng/triage-factory"
-  version "1.20.1"
+  version "0.20.1"
   license "BUSL-1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.20.1/triagefactory_1.20.1_darwin_amd64.tar.gz"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v0.20.1/triagefactory_1.20.1_darwin_amd64.tar.gz"
       sha256 "f7e7301b3164b1f06f9baa27c965d197f22163a37f6683b7605a1952d4870845"
 
       define_method(:install) do
@@ -18,7 +18,7 @@ class Triagefactory < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.20.1/triagefactory_1.20.1_darwin_arm64.tar.gz"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v0.20.1/triagefactory_1.20.1_darwin_arm64.tar.gz"
       sha256 "80aa7d945bcb9e4f1ed8df631d67be4c8f8fa1a680aceb9d9b29d13e435d96c5"
 
       define_method(:install) do
@@ -29,14 +29,14 @@ class Triagefactory < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.20.1/triagefactory_1.20.1_linux_amd64.tar.gz"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v0.20.1/triagefactory_1.20.1_linux_amd64.tar.gz"
       sha256 "f24c919630244087354482bf857c0110ee40c3ce25b3748a62a8ea6cfbd23f5c"
       define_method(:install) do
         bin.install "triagefactory"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v1.20.1/triagefactory_1.20.1_linux_arm64.tar.gz"
+      url "https://github.com/sky-ai-eng/triage-factory/releases/download/v0.20.1/triagefactory_1.20.1_linux_arm64.tar.gz"
       sha256 "633a95b298ff6a89144e886868daaaa40c2ddba4bd0c8cac1dfa33cf3bb46a9a"
       define_method(:install) do
         bin.install "triagefactory"
